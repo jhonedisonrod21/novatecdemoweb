@@ -1,0 +1,13 @@
+<div class="main">
+  <h2>Registrar un nuevo usuario</h2>
+  <input type="text" pInputText class="p-inputtext-lg"  placeholder="Nombres" [(ngModel)]="nombres">
+  <input type="text" pInputText class="p-inputtext-lg"  placeholder="Apellidos" [(ngModel)]="apellidos">
+  <p>Seleccione rol del usuario</p>
+  <div class="splitter">
+    <p-selectButton [options]="stateOptions" [(ngModel)]="selectedRole" optionLabel="label" optionValue="value"></p-selectButton>
+  </div>
+  <div class="buttons">
+    <button pButton type="button" label="Cancelar" class="p-button-secondary" (click)="cancelar()"></button>
+    <button pButton type="button" label="Registrar" class="p-button-success" (click)="enviar()"></button>
+  </div>
+</div>
